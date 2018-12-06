@@ -1,16 +1,14 @@
 public class TravelOffice {
+
     public static int countCustomer=0;
     public static Customer [] tablica = new Customer [2];
 
-
-
     public static void main(String[] args) {
-        int countCustomer=0;
-        Customer [] tablica = new Customer [2];
+
         Date start = new Date(2022,12,25);
         Date end = new Date(2025,12,25);
 
-       Address ad = new Address("lodz ","9885","Warszawska");
+        Address ad = new Address("lodz ","9885","Warszawska");
         Trip tr = new Trip(start,end,"London");
         Customer cs = new Customer("Dave");
         Customer qw = new Customer("Harold");
@@ -28,18 +26,15 @@ public class TravelOffice {
 
         qq.assignTrip(tr);
         qq.setAddres(ad);
-        // System.out.println(start.getInfo());
-       // System.out.println(cs.getInfo());
-        addCustomer(cs);
-       // showTable();
-        addCustomer(qw);
-        //System.out.println(countCustomer);
 
+        addCustomer(cs);
+        addCustomer(qw);
         addCustomer(qq);
         addCustomer(ww);
-        showTable();
-        System.out.println("CC "+countCustomer);
 
+        showTable();
+
+        System.out.println("CC "+countCustomer);
     }
     public static void addCustomer (Customer cust) {
         if(countCustomer+1>tablica.length){
@@ -49,19 +44,13 @@ public class TravelOffice {
             }
             tablica=tab;
         }
-
         tablica[countCustomer]=cust;
         countCustomer++;
     }
-
-
      public static void showTable() {
         for(int i = 0 ; i<tablica.length;i++){
             System.out.println(i+" Element tAblicy to \n"+tablica[i].getInfo());
         }
-
          System.out.println(countCustomer);
     }
-
-
 }
