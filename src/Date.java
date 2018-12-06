@@ -3,7 +3,7 @@ public class Date {
     private int year;
     private int month;
     private int day;
-    private  Scanner sc = new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
 
 
     public Date(){
@@ -20,15 +20,16 @@ public class Date {
         this.day = day;
 
     }
-    public  void getDAte(){
+    public static Date  getDAte(){
 
         String date = sc.nextLine();
         String []date1=date.split("\\.");
         System.out.println(date1.length);
-        if(date1.length==3 && (Integer.parseInt(date1[0])>=0 && Integer.parseInt(date1[0])<=9999))
-        this.year=Integer.parseInt(date1[0]);
-        this.month=Integer.parseInt(date1[1]);
-        this.day=Integer.parseInt(date1[2]);
+        //if(date1.length==3 && (Integer.parseInt(date1[0])>=0 && Integer.parseInt(date1[0])<=9999))
+        Date newDate = new Date(Integer.parseInt(date1[0]),Integer.parseInt(date1[1]),Integer.parseInt(date1[2]));
+//        this.year=Integer.parseInt(date1[0]);
+//        this.month=Integer.parseInt(date1[1]);
+//        this.day=Integer.parseInt(date1[2]);
 
 //        for(int i = 0 ; i<date1.length ;i++){
 //            if(i==0){
@@ -41,6 +42,7 @@ public class Date {
 //            }
 //    }
         sc.close();
+        return newDate;
     }
 
     @Override
