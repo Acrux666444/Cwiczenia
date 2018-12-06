@@ -5,37 +5,39 @@ public class Test {
 
     public static void main(String[] args) {
 
-        Date start = new Date(2022,12,25);
-        Date end = new Date(2025,12,25);
-
-        Address ad = new Address("lodz ","9885","Warszawska");
-        Trip tr = new Trip(start,end,"London",2000.2);
-        Customer cs = new Customer("Dave");
-        Customer qw = new Customer("Harold");
-        Customer qq = new Customer("Matthew");
-        Customer ww = new Customer("Mariano");
-
-        Trip brasil = new DomesticTrip(start,end,"Brasil",562.22);
-        Trip inCountry = new AboardTrip(start,end,"Wroclaw",999.2);
-
-        ww.setAddres(ad);
-        ww.assignTrip(brasil);
-
-        qw.assignTrip(inCountry);
-        qw.setAddres(ad);
-
-//        cs.assignTrip(tr);
-//        cs.setAddres(ad);
+//        Date start = new Date(2022,12,25);
+//        Date end = new Date(2025,12,25);
 //
-//        qq.assignTrip(tr);
-//        qq.setAddres(ad);
+//        Address ad = new Address("lodz ","9885","Warszawska");
+//        Trip tr = new Trip(start,end,"London",2000.2);
+//        Customer cs = new Customer("Dave");
+//        Customer qw = new Customer("Harold");
+//        Customer qq = new Customer("Matthew");
+//        Customer ww = new Customer("Mariano");
+//
+//        Trip brasil = new DomesticTrip(start,end,"Brasil",562.22);
+//        Trip inCountry = new AboardTrip(start,end,"Wroclaw",999.2);
+//
+//        ww.setAddres(ad);
+//        ww.assignTrip(brasil);
+//
+//        qw.assignTrip(inCountry);
+//        qw.setAddres(ad);
+//
+////        cs.assignTrip(tr);
+////        cs.setAddres(ad);
+////
+////        qq.assignTrip(tr);
+////        qq.setAddres(ad);
+//
+////        addCustomer(cs);
+//        addCustomer(qw);
+////        addCustomer(qq);
+//        addCustomer(ww);
+        Date da = new Date();
+        System.out.println(da.toString());
 
-//        addCustomer(cs);
-        addCustomer(qw);
-//        addCustomer(qq);
-        addCustomer(ww);
-
-        showTable();
+        //showTable();
 
         System.out.println("CC "+countCustomer);
     }
