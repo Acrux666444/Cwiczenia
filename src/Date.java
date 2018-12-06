@@ -1,7 +1,7 @@
 public class Date {
-    public int year;
-    public int month;
-    public int day;
+    private int year;
+    private int month;
+    private int day;
 
 
 
@@ -13,11 +13,20 @@ public class Date {
 
     }
 
-    public String getInfo(){
-        String info="Rok " +year + " Miesiac " +month+ " Dzien " +day;
-
-       // System.out.println("Rok " +year + " Miesiac " +month+ " Dzien " +day);
-        return info;
-
+    @Override
+    public String toString() {
+        return "Date{" +
+                "year=" + year +
+                ", month=" + month +
+                ", day=" + day +
+                '}';
     }
+
+//    public String toString(){
+//        String info="Rok " +year + " Miesiac " +month+ " Dzien " +day;
+//
+//       // System.out.println("Rok " +year + " Miesiac " +month+ " Dzien " +day);
+//        return info;
+//
+//    }
 }
