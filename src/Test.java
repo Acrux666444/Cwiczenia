@@ -34,7 +34,7 @@ public class Test {
 //        addCustomer(qw);
 ////        addCustomer(qq);
 //        addCustomer(ww);
-        Date da = new Date();
+        Date da = Date.getDAte();
         System.out.println(da.toString());
 
         //showTable();

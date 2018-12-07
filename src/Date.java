@@ -24,25 +24,17 @@ public class Date {
 
         String date = sc.nextLine();
         String []date1=date.split("\\.");
+        if(date1.length != 3){
+            System.out.println("podales zly format");
+            return null;
+        }else{
         System.out.println(date1.length);
-        //if(date1.length==3 && (Integer.parseInt(date1[0])>=0 && Integer.parseInt(date1[0])<=9999))
-        Date newDate = new Date(Integer.parseInt(date1[0]),Integer.parseInt(date1[1]),Integer.parseInt(date1[2]));
-//        this.year=Integer.parseInt(date1[0]);
-//        this.month=Integer.parseInt(date1[1]);
-//        this.day=Integer.parseInt(date1[2]);
-
-//        for(int i = 0 ; i<date1.length ;i++){
-//            if(i==0){
-//                System.out.println(Integer.parseInt(date1[0]));
-//                this.year=Integer.parseInt(date1[i]);
-//            }else if(i==1){
-//                this.month=Integer.parseInt(date1[1]);
-//            }else if(i==2){
-//                this.day=Integer.parseInt(date1[2]);
-//            }
-//    }
         sc.close();
-        return newDate;
+        //if(date1.length==3 && (Integer.parseInt(date1[0])>=0 && Integer.parseInt(date1[0])<=9999))
+        return new Date(Integer.parseInt(date1[0]),Integer.parseInt(date1[1]),Integer.parseInt(date1[2]));
+       }
+
+
     }
 
     @Override
