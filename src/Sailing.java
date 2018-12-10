@@ -1,3 +1,3 @@
-public interface Sailing {
+interface Sailing {
     void dock();
 }
