@@ -29,4 +29,8 @@ public class Customer {
                 ", trip=" + trip.toString() +
                 '}';
     }
+
+    public String getName() {
+        return name;
+    }
 }
